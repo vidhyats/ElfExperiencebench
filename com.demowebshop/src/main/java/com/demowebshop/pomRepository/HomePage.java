@@ -1,0 +1,44 @@
+package com.demowebshop.pomRepository;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePage extends BasePage
+{
+public HomePage(WebDriver  driver)
+{
+	super(driver);
+}
+@FindBy(xpath = "//div[@class='header-links']//a[@class='account']")
+private WebElement loggedInEmailIDLink;
+public void clickEmailIDAccount()
+{
+	loggedInEmailIDLink.click();
+}
+
+public WebElement getLoggedInEmailIDLink() {
+	return loggedInEmailIDLink;
+}
+
+public void setLoggedInEmailIDLink(WebElement loggedInEmailIDLink) {
+	this.loggedInEmailIDLink = loggedInEmailIDLink;
+}
+@FindBy(className = "ico-logout")
+ private WebElement LogoutLink;
+
+public WebElement getLogoutLink() {
+	return LogoutLink;
+}
+
+public void setLogoutLink(WebElement logoutLink)
+{
+	this.LogoutLink = logoutLink;
+}
+
+
+
+
+}
+
