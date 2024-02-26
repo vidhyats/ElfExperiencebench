@@ -25,9 +25,14 @@ public class Base_Test extends Frameworklibrary
 public void reportConfig()
 {
 	sparkReporter=new ExtentSparkReporter(EXTENT_PATH+name());
+	
+	
+}
+@BeforeClass
+public void reportStart()
+{
 	reports=new ExtentReports();
 	reports.attachReporter(sparkReporter);
-	
 }
 	@BeforeMethod
 public void browserSetup(Method method) throws IOException
